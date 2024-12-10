@@ -146,6 +146,35 @@ server {
 }
 ```
 
+## Tareas Programadas
+
+El sistema incluye un comando para cerrar automáticamente los registros que quedaron abiertos del día anterior. Este comando necesita ser configurado como una tarea programada (cron job) para su ejecución automática.
+
+### Comando CerrarRegistros
+
+Este comando cierra automáticamente los registros que no tienen hora de salida registrada del día anterior, estableciendo la hora de salida a las 23:59:59 del mismo día.
+
+Para ejecutar el comando manualmente:
+```bash
+php spark registros:cerrar
+```
+
+### Configuración del Cron Job
+
+Para automatizar la ejecución del comando, configura un cron job en el servidor:
+
+1. Abrir el editor de cron:
+```bash
+crontab -e
+```
+
+2. Añadir la siguiente línea (ajustar la ruta según tu instalación):
+```bash
+1 0 * * * cd /ruta/a/tu/proyecto && php spark registros:cerrar >> /ruta/logs/cron.log 2>&1
+```
+
+Esta configuración ejecutará el comando todos los días a las 00:01 y guardará un log de la ejecución.
+
 ## Seguridad
 
 - Asegúrate de que solo la carpeta `public/` sea accesible desde la web
@@ -153,4 +182,3 @@ server {
 - Mantén actualizado PHP y todas las dependencias
 - Utiliza HTTPS en producción
 - Realiza copias de seguridad regulares de la base de datos
-
