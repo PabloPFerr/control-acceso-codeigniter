@@ -1,4 +1,4 @@
-# Sistema de Control de Acceso - CodeIgniter 4
+# Sistema de Control de Horario - CodeIgniter 4
 
 Este proyecto es un sistema de registro horario laboral desarrollado con CodeIgniter 4. El sistema permite la autenticación de usuarios, gestión de roles y permisos, y registro de accesos.
 
