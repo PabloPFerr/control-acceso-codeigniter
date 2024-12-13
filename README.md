@@ -1,6 +1,6 @@
 # Sistema de Control de Acceso - CodeIgniter 4
 
-Este proyecto es un sistema de control de acceso desarrollado con CodeIgniter 4, diseñado para gestionar el acceso de usuarios a diferentes áreas o recursos. El sistema permite la autenticación de usuarios, gestión de roles y permisos, y registro de accesos.
+Este proyecto es un sistema de registro horario laboral desarrollado con CodeIgniter 4. El sistema permite la autenticación de usuarios, gestión de roles y permisos, y registro de accesos.
 
 ## Características Principales
 
